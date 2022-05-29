@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.qquang24t5._8tea.HoadonController">
+   <children>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#backForm" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8_back_52px.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="TOP" layoutX="382.0" layoutY="9.0" text="BÁN HÀNG" textFill="#348bc5">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Text fx:id="txtBaoLoi" layoutX="86.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="174.8033447265625" />
+      <TableView fx:id="tblHD" layoutX="73.0" layoutY="105.0" onMouseClicked="#getCTHD" prefHeight="387.0" prefWidth="471.0">
+        <columns>
+          <TableColumn fx:id="colMaHD" prefWidth="75.66668701171875" text="Mã HD" />
+          <TableColumn fx:id="colTenNV" prefWidth="114.0" text="Tên nhân viên" />
+            <TableColumn fx:id="colNgayLap" prefWidth="93.33331298828125" text="Ngày lập" />
+            <TableColumn fx:id="colKM" prefWidth="90.0" text="Khuyến mãi" />
+            <TableColumn fx:id="colTongTien" prefWidth="94.3333740234375" text="Tổng tiền" />
+        </columns>
+      </TableView>
+      <Button layoutX="73.0" layoutY="68.0" mnemonicParsing="false" onAction="#giaodienlapHD" prefHeight="28.0" prefWidth="98.0" text="Lập hóa đơn" />
+      <TableView fx:id="tblCTHD" layoutX="565.0" layoutY="161.0" prefHeight="265.0" prefWidth="269.0">
+         <columns>
+            <TableColumn fx:id="colTenSP" prefWidth="98.66668701171875" text="Tên sản phẩm" />
+            <TableColumn fx:id="colSL" prefWidth="75.0" text="Số lượng" />
+            <TableColumn fx:id="colThanhTien" prefWidth="94.0" text="Thành tiền" />
+         </columns>
+      </TableView>
+      <Label layoutX="567.0" layoutY="105.0" text="Mã hóa đơn :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="567.0" layoutY="132.0" text="Ngày lập :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="569.0" layoutY="429.0" text="Tổng cộng">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbTongCong" layoutX="706.0" layoutY="429.0" prefHeight="20.0" prefWidth="128.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbMaHD" layoutX="658.0" layoutY="105.0" prefHeight="20.0" prefWidth="151.0" textFill="#2763b7">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbNgayLap" layoutX="658.0" layoutY="132.0" prefHeight="20.0" prefWidth="151.0" textFill="#2763b7">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="618.0" layoutY="61.0" text="CHI TIẾT HÓA ĐƠN" textFill="#348bc5">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Line endX="0.66668701171875" endY="448.33331298828125" layoutX="554.0" layoutY="47.0" startX="0.66668701171875" startY="-0.3333282470703125" stroke="#3f809a" strokeWidth="3.0" />
+      <Label layoutX="569.0" layoutY="453.0" text="Khuyến mãi">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbKhuyenMai" layoutX="706.0" layoutY="453.0" prefHeight="20.0" prefWidth="128.0" textFill="#14b30f">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="569.0" layoutY="477.0" text="Tổng tiền">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbTongTien" layoutX="706.0" layoutY="477.0" prefHeight="20.0" prefWidth="128.0" textFill="#1c63aa">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

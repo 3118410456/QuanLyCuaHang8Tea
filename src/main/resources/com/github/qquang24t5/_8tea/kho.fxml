@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.qquang24t5._8tea.KhoController">
+   <children>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#backForm" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8_back_52px.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblKho" layoutX="86.0" layoutY="250.0" onMouseClicked="#getDuLieu" prefHeight="243.0" prefWidth="742.0">
+        <columns>
+          <TableColumn fx:id="colMaNVL" prefWidth="113.60003662109375" text="Mã NVL" />
+          <TableColumn fx:id="colLoaiNVL" prefWidth="135.199951171875" text="Loại NVL" />
+            <TableColumn fx:id="colTenNVL" prefWidth="125.5999755859375" text="Tên NVL" />
+            <TableColumn fx:id="colSoLuong" prefWidth="116.0" text="Số lượng" />
+            <TableColumn fx:id="colDonViTinh" prefWidth="128.7999267578125" text="Đơn vị tính" />
+            <TableColumn fx:id="colGiaNhap" prefWidth="126.4000244140625" text="Giá nhập" />
+        </columns>
+      </TableView>
+      <Label layoutX="86.0" layoutY="66.0" text="Mã NVL">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMaNVL" disable="true" layoutX="86.0" layoutY="87.0" />
+      <Label layoutX="86.0" layoutY="120.0" text="Loại NVL">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="337.0" layoutY="65.0" text="Tên NVL">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTenNVL" layoutX="335.0" layoutY="85.0" />
+      <Label layoutX="335.0" layoutY="122.0" text="Số lượng">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSoLuong" layoutX="335.0" layoutY="142.0" />
+      <Label layoutX="592.0" layoutY="62.0" text="Đơn vị tính">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="592.0" layoutY="122.0" text="Giá nhập">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtGiaNhap" layoutX="592.0" layoutY="143.0" />
+      <ComboBox fx:id="cbLoaiNVL" layoutX="86.0" layoutY="141.0" prefWidth="150.0" />
+      <Button layoutX="553.0" layoutY="206.0" mnemonicParsing="false" onAction="#themNVL" prefHeight="25.0" prefWidth="73.0" text="Thêm" />
+      <Button layoutX="650.0" layoutY="206.0" mnemonicParsing="false" onAction="#SuaNVL" prefHeight="25.0" prefWidth="73.0" text="Sửa" />
+      <Button layoutX="754.0" layoutY="206.0" mnemonicParsing="false" onAction="#xoaNVL" prefHeight="25.0" prefWidth="73.0" text="Xóa" />
+      <Line endX="5.33331298828125" endY="109.60000610351562" layoutX="269.0" layoutY="68.0" startX="5.33331298828125" startY="9.333328247070312" />
+      <Line endX="5.33331298828125" endY="112.20001220703125" layoutX="523.0" layoutY="67.0" startX="5.33331298828125" startY="9.333328247070312" />
+      <Label layoutX="316.0" layoutY="9.0" text="QUẢN LÝ NGUYÊN VẬT LIỆU" textFill="#348bc5">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Text fx:id="txtBaoLoi" layoutX="561.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="210.13665771484375" />
+      <ComboBox fx:id="cbDVT" layoutX="592.0" layoutY="85.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

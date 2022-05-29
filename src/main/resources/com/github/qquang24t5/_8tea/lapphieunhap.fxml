@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.qquang24t5._8tea.LapphieunhapController">
+   <children>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="20.0" layoutY="20.0" onMouseClicked="#backForm" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8_back_52px.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblPN" layoutX="310.0" layoutY="95.0" prefHeight="256.0" prefWidth="534.0">
+         <columns>
+            <TableColumn fx:id="colNVL" prefWidth="112.0" text="Tên NVL" />
+            <TableColumn fx:id="colDVT" prefWidth="72.79998779296875" text="ĐVT" />
+            <TableColumn fx:id="colSL" prefWidth="65.5999755859375" text="Số lượng" />
+            <TableColumn fx:id="colDGN" prefWidth="112.79998779296875" text="Đơn giá nhập" />
+            <TableColumn fx:id="colTT" prefWidth="122.4000244140625" text="Thành tiền" />
+            <TableColumn fx:id="colXoa" prefWidth="46.4000244140625" />
+         </columns>
+      </TableView>
+      <VBox fx:id="vboxLoaiNVL" layoutX="31.0" layoutY="78.0" prefHeight="426.0" prefWidth="112.0" />
+      <TableView fx:id="tblNVL" layoutX="164.0" layoutY="52.0" onMouseClicked="#themNVLnhap" prefHeight="452.0" prefWidth="126.0">
+         <columns>
+            <TableColumn fx:id="colTenNVL" prefWidth="124.0" text="Tên NVL" />
+         </columns>
+      </TableView>
+      <Button layoutX="540.0" layoutY="460.0" mnemonicParsing="false" onAction="#lapPN" prefHeight="26.0" prefWidth="74.0" text="Tạo" />
+      <Label layoutX="55.0" layoutY="53.0" text="LOẠI NVL" textFill="#263e84">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="489.0" layoutY="58.0" text="LẬP PHIẾU NHẬP" textFill="#263e84">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Line endX="-100.0" endY="448.0" layoutX="400.0" layoutY="55.0" startX="-100.0" startY="0.6666717529296875" stroke="#5e5e5e" strokeLineCap="ROUND" strokeWidth="5.0" />
+      <Label layoutX="392.0" layoutY="412.0" text="Tổng tiền : ">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="392.0" layoutY="364.0" text="Nhà cung cấp" textFill="#263e84">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbNCC" layoutX="502.0" layoutY="362.0" prefWidth="150.0" />
+      <Label fx:id="txtThanhToan" layoutX="502.0" layoutY="409.0" prefHeight="26.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

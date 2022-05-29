@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.qquang24t5._8tea.ThemcvController">
+   <children>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#backFormCV" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8_back_52px.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtTenCV" layoutX="264.0" layoutY="79.0" prefHeight="26.0" prefWidth="127.0" />
+      <Label layoutX="263.0" layoutY="53.0" text="Tên chức vụ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="114.0" text="Cấp quyền">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <VBox fx:id="vbox" layoutX="98.0" layoutY="140.0" prefHeight="312.0" prefWidth="264.0" />
+      <Button layoutX="104.0" layoutY="452.0" mnemonicParsing="false" onAction="#themCV" prefHeight="25.0" prefWidth="61.0" text="Thêm" />
+      <Line endX="-6.66668701171875" endY="467.0" layoutX="447.0" layoutY="29.0" startX="-6.66668701171875" startY="-16.333328247070312" />
+      <Label layoutX="473.0" layoutY="151.0" text="Danh sách quyền">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="663.0" layoutY="47.0" text="Tên quyền">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTenQuyen" layoutX="664.0" layoutY="73.0" prefHeight="26.0" prefWidth="170.0" />
+      <Button fx:id="btnThem" layoutX="472.0" layoutY="109.0" mnemonicParsing="false" onAction="#themQuyen" prefHeight="25.0" prefWidth="61.0" text="Thêm" />
+      <TableView fx:id="tblQuyen" layoutX="473.0" layoutY="183.0" onMouseClicked="#getDuLieu" prefHeight="312.0" prefWidth="362.0">
+        <columns>
+          <TableColumn fx:id="colMaQuyen" prefWidth="111.0" text="Mã quyền" />
+          <TableColumn fx:id="colTenQuyen" prefWidth="241.0" text="Tên quyền" />
+        </columns>
+      </TableView>
+      <Button layoutX="541.0" layoutY="109.0" mnemonicParsing="false" onAction="#suaQuyen" prefHeight="25.0" prefWidth="61.0" text="Sửa" />
+      <Button layoutX="607.0" layoutY="109.0" mnemonicParsing="false" onAction="#xoaCN" prefHeight="25.0" prefWidth="61.0" text="Xóa" />
+      <Label layoutX="566.0" layoutY="12.0" text="QUẢN LÝ QUYỀN" textFill="#1252ff">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="155.0" layoutY="14.0" text="THÊM CHỨC VỤ" textFill="#1252ff">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="472.0" layoutY="47.0" text="Mã quyền">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMaQuyen" layoutX="471.0" layoutY="73.0" prefHeight="26.0" prefWidth="170.0" />
+      <TextField fx:id="txtMaCV" layoutX="97.0" layoutY="79.0" prefHeight="26.0" prefWidth="127.0" />
+      <Label layoutX="96.0" layoutY="53.0" text="Mã chức vụ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.qquang24t5._8tea.ThongkeController">
+   <children>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#backForm" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8_back_52px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="358.0" layoutY="9.0" prefHeight="38.0" prefWidth="133.0" text="THỐNG KÊ" textFill="#348bc5">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblDoanhThu" layoutX="59.0" layoutY="90.0" prefHeight="377.0" prefWidth="328.0">
+        <columns>
+            <TableColumn fx:id="colMaHD" prefWidth="82.0" text="Mã HD" />
+            <TableColumn fx:id="colNgayLap" prefWidth="86.66668701171875" text="Ngày lập" />
+            <TableColumn fx:id="colKM" prefWidth="79.0" text="Khuyến mãi" />
+            <TableColumn fx:id="colTong" text="Tổng" />
+        </columns>
+      </TableView>
+      <Label layoutX="411.0" layoutY="177.0" text="Ngày bắt đầu">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblSP" layoutX="605.0" layoutY="91.0" prefHeight="377.0" prefWidth="229.0">
+         <columns>
+            <TableColumn fx:id="colSP" prefWidth="146.33331298828125" text="Sản phẩm" />
+            <TableColumn fx:id="colTongSP" prefWidth="81.66668701171875" text="Tổng" />
+         </columns>
+      </TableView>
+      <Label layoutX="59.0" layoutY="64.0" prefHeight="20.0" prefWidth="90.0" text="Doanh thu" textFill="#348bc5">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="605.0" layoutY="64.0" prefHeight="27.0" prefWidth="238.0" text="Lượng sản phẩm bán được" textFill="#348bc5">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="rdToanTG" layoutX="411.0" layoutY="122.0" mnemonicParsing="false" onAction="#clickToanTG" selected="true" text="Toàn thời gian">
+         <toggleGroup>
+            <ToggleGroup fx:id="thongkegr" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rdKhoangTG" layoutX="411.0" layoutY="147.0" mnemonicParsing="false" onAction="#clickKhoangTG" selected="true" text="Khoảng thời gian" toggleGroup="$thongkegr" />
+      <DatePicker fx:id="dateBD" layoutX="411.0" layoutY="200.0" />
+      <DatePicker fx:id="dateKT" layoutX="411.0" layoutY="256.0" />
+      <Label layoutX="410.0" layoutY="91.0" prefHeight="27.0" prefWidth="163.0" text="Hình thức thống kê" textFill="#348bc5">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="411.0" layoutY="234.0" text="Ngày kết thúc">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="410.0" layoutY="376.0" mnemonicParsing="false" onAction="#thongke" prefHeight="25.0" prefWidth="78.0" text="Thống kê" />
+      <Label layoutX="59.0" layoutY="468.0" prefHeight="20.0" prefWidth="90.0" text="Tổng" textFill="#348bc5">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbTongHD" layoutX="287.0" layoutY="468.0" prefHeight="27.0" prefWidth="98.0" textFill="#348bc5">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="411.0" layoutY="297.0" text="Nhân viên">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbNV" layoutX="410.0" layoutY="319.0" prefHeight="25.0" prefWidth="174.0" />
+      <Text fx:id="txtLoi" fill="#ef0000" layoutX="411.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="174.00000259280205">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnExcel" layoutX="509.0" layoutY="376.0" mnemonicParsing="false" onAction="#xuatExcel" prefHeight="25.0" prefWidth="78.0" text="Xuất Excel" />
+   </children>
+</AnchorPane>

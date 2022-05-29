@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.qquang24t5._8tea.PhanloaiSPController">
+   <children>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#backForm" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8_back_52px.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblLoaiSP" layoutX="339.0" layoutY="81.0" onMouseClicked="#getDuLieu" prefHeight="406.0" prefWidth="489.0">
+        <columns>
+          <TableColumn fx:id="colMaLoaiSP" prefWidth="205.66668701171875" text="Mã loại sản phẩm" />
+          <TableColumn fx:id="colTenLoaiSP" prefWidth="315.33331298828125" text="Tên loại sản phẩm" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtMaLoaiSP" disable="true" layoutX="99.0" layoutY="109.0" />
+      <Label layoutX="99.0" layoutY="81.0" text="Mã loại sản phẩm">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTenLoaiSP" layoutX="99.0" layoutY="171.0" />
+      <Label layoutX="99.0" layoutY="143.0" text="Tên loại sản phẩm">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="99.0" layoutY="233.0" mnemonicParsing="false" onAction="#themLoaiSP" prefHeight="25.0" prefWidth="69.0" text="Thêm" />
+      <Button layoutX="99.0" layoutY="273.0" mnemonicParsing="false" onAction="#suaLoaiSP" prefHeight="25.0" prefWidth="69.0" text="Sửa" />
+      <Button layoutX="99.0" layoutY="311.0" mnemonicParsing="false" onAction="#xoaLoaiSP" prefHeight="25.0" prefWidth="69.0" text="Xóa" />
+      <Label layoutX="261.0" layoutY="14.0" text="PHÂN LOẠI SẢN PHẨM" textFill="#3b87be">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Text fx:id="txtBaoLoi" fill="RED" layoutX="99.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="172.80337524414062">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

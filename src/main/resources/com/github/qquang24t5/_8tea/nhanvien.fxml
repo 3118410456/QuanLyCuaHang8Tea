@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.qquang24t5._8tea.NhanvienController">
+   <children>
+      <Label layoutX="51.0" layoutY="66.0" prefHeight="10.0" prefWidth="78.0" text="Mã nhân viên" />
+      <Label layoutX="51.0" layoutY="109.0" text="Chức vụ" />
+      <Label layoutX="54.0" layoutY="147.0" text="Họ tên" />
+      <Label layoutX="54.0" layoutY="189.0" text="Giới tính" />
+      <Label layoutX="370.0" layoutY="68.0" text="Ngày sinh" />
+      <Label layoutX="370.0" layoutY="107.0" text="Số điện thoại" />
+      <TableView fx:id="tblNhanvien" layoutX="48.0" layoutY="276.0" onMouseClicked="#getDulieu" prefHeight="214.0" prefWidth="775.0">
+        <columns>
+          <TableColumn fx:id="colMaNV" prefWidth="81.33334350585938" text="Mã NV" />
+            <TableColumn fx:id="colCV" prefWidth="96.0" text="Chức vụ" />
+          <TableColumn fx:id="colHoTen" prefWidth="162.0" text="Họ tên" />
+            <TableColumn fx:id="colGT" prefWidth="79.66668701171875" text="Giới tính" />
+            <TableColumn fx:id="colSDT" minWidth="7.0" prefWidth="135.0" text="Số điện thoại" />
+            <TableColumn fx:id="colNS" prefWidth="114.0" text="Ngày sinh" />
+            <TableColumn fx:id="colTT" prefWidth="105.0" text="Trạng thái" />
+        </columns>
+      </TableView>
+      <Button layoutX="48.0" layoutY="242.0" mnemonicParsing="false" onAction="#themNV" text="Thêm" />
+      <Button layoutX="115.0" layoutY="242.0" mnemonicParsing="false" onAction="#suaNV" prefHeight="25.0" prefWidth="46.0" text="Sửa" />
+      <TextField fx:id="txtMaNV" disable="true" layoutX="133.0" layoutY="62.0" prefHeight="25.0" prefWidth="177.0" />
+      <TextField fx:id="txtHoTen" layoutX="133.0" layoutY="143.0" prefHeight="25.0" prefWidth="177.0" />
+      <TextField fx:id="txtSDT" layoutX="452.0" layoutY="103.0" prefHeight="25.0" prefWidth="142.0" />
+      <RadioButton fx:id="rdNam" layoutX="135.0" layoutY="189.0" mnemonicParsing="false" text="Nam">
+         <toggleGroup>
+            <ToggleGroup fx:id="gioitinh" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rdNu" layoutX="191.0" layoutY="189.0" mnemonicParsing="false" text="Nữ" toggleGroup="$gioitinh" />
+      <ComboBox fx:id="cbChucvu" layoutX="133.0" layoutY="105.0" prefHeight="25.0" prefWidth="177.0" />
+      <DatePicker fx:id="txtNS" layoutX="452.0" layoutY="65.0" prefHeight="25.0" prefWidth="142.0" />
+      <Line endX="676.3333129882812" layoutX="147.0" layoutY="228.0" startX="-100.0" />
+      <Label layoutX="319.0" layoutY="10.0" text="QUẢN LÝ NHÂN VIÊN" textFill="#0080ff">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#backHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8_back_52px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="369.0" layoutY="147.0" text="Trạng thái" />
+      <ComboBox fx:id="cmTrangthai" layoutX="452.0" layoutY="143.0" prefHeight="25.0" prefWidth="142.0" />
+      <Line endX="7.66668701171875" endY="147.66665649414062" layoutX="338.0" layoutY="61.0" startX="7.66668701171875" startY="4.6666717529296875" />
+      <Line endX="7.66668701171875" endY="143.0" layoutX="617.0" layoutY="69.0" startX="7.66668701171875" startY="-1.6666717529296875" />
+      <Text fx:id="lbLoi" fill="RED" layoutX="635.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="188.99998664855957" />
+      <Label layoutX="684.0" layoutY="56.0" text="THÔNG BÁO" textFill="#276bba">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

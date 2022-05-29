@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="txt" prefHeight="509.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.qquang24t5._8tea.KhuyenmaiController">
+   <children>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#backHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8_back_52px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="634.0" layoutY="16.0" text="TẠO KHUYẾN MÃI" textFill="#006aff">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Text fx:id="txtBaoLoi" layoutX="636.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="185.60000000000014" />
+      <TableView fx:id="tblKM" layoutX="68.0" layoutY="16.0" onMouseClicked="#getDuLieu" prefHeight="480.0" prefWidth="541.0">
+        <columns>
+          <TableColumn fx:id="colMaKM" prefWidth="115.66668701171875" text="Mã khuyến mãi" />
+          <TableColumn fx:id="colTenKM" minWidth="0.0" prefWidth="113.0" text="Tên chương trình" />
+            <TableColumn fx:id="colNgayBD" prefWidth="113.66668701171875" text="Ngày bắt đầu" />
+            <TableColumn fx:id="colNgayKT" prefWidth="110.33331298828125" text="Ngày kết thúc" />
+            <TableColumn fx:id="colPhanTram" prefWidth="87.0" text="Phần trăm" />
+        </columns>
+      </TableView>
+      <Label layoutX="634.0" layoutY="58.0" text="Mã khuyến mãi">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMaKM" disable="true" layoutX="634.0" layoutY="78.0" prefHeight="25.0" prefWidth="186.0" />
+      <Label layoutX="636.0" layoutY="111.0" text="Tên chương trình">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTenKM" layoutX="636.0" layoutY="131.0" prefHeight="25.0" prefWidth="186.0" />
+      <Label layoutX="639.0" layoutY="170.0" text="Ngày bắt đầu">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="txtNgayBD" layoutX="637.0" layoutY="192.0" prefHeight="25.0" prefWidth="186.0" />
+      <Label layoutX="640.0" layoutY="226.0" text="Ngày kết thúc">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="txtNgayKT" layoutX="638.0" layoutY="248.0" prefHeight="25.0" prefWidth="186.0" />
+      <Label layoutX="638.0" layoutY="284.0" text="Phần trăm khuyến mãi">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPhanTram" layoutX="638.0" layoutY="304.0" prefHeight="25.0" prefWidth="186.0" />
+      <Button layoutX="627.0" layoutY="436.0" mnemonicParsing="false" onAction="#themKM" prefHeight="25.0" prefWidth="95.0" text="Thêm" />
+      <Button layoutX="729.0" layoutY="436.0" mnemonicParsing="false" onAction="#xoaKM" prefHeight="25.0" prefWidth="95.0" text="Xóa" />
+   </children>
+</AnchorPane>
